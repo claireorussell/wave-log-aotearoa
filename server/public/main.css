@@ -1,0 +1,95 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    background-size: cover;
+    padding: 5pc 18pc;
+    color: navy;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 7pc; 
+    margin: 10px 0px;
+}
+
+h2 {
+    font-size: 3pc;
+    margin: 0px;
+    color: navy;
+    
+}
+
+.btn {
+    font-size: 1.5pc;
+    margin: 0.5pc;
+    color: rgb(32, 183, 210);
+    height: 3pc;
+    
+}
+
+.btn a {
+    text-decoration: none !important;
+}
+
+/* 
+Add wave page
+*/
+form {
+    text-align: left;
+    border: 1px solid white;
+    font-size: 1pc;
+    background-color: rgba(255, 255, 255, .75);
+    width: 30pc;
+    font-weight: bold;
+    color: navy;
+    padding: 1pc;
+}
+
+label {
+    height:1pc;
+    padding: 1pc 0pc;
+}
+
+input {
+    height: 2pc;
+    width: 28pc;
+}
+
+.submit {
+    font-size: 1.5pc;
+}
+
+
+/* 
+Wave display page
+*/
+
+
+.section {
+    width: 50pc;
+}
+
+.waveTitle {
+    color: navy;
+    margin:0pc;
+    padding: 1pc;
+    font-weight: bolder;
+    background-color: rgb(238, 225, 121);
+    border-radius: 2pc 2pc 0pc 0pc;
+}
+.info {
+    border-radius: 0pc 0pc 2pc 2pc;
+    font-size: 1.5pc;
+    text-align: left;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, .75);
+    margin: 0pc 0pc 5pc;
+    color: rgb(0, 157, 255);
+    padding: 1pc;
+}
+
+.beachImage {
+    width: 50pc;
+    height:25pc;
+
+}
