@@ -8,11 +8,11 @@ function getLocation(db = connection){
     .select('*')
 }
 
-// function getBeaches(id, db = connection){
-//     return db('beach')
-//     .where('location_id', '=', id)
-//     .select('*')
-// }
+function getNorthBeaches(db = connection){
+    return db('Waves')
+    .where('location_id', '=', '1')
+    .select('*')
+}
 
 // function addWave(newBeach, db = connection) {
 //     // console.log(newBeach)
@@ -23,7 +23,7 @@ function getLocation(db = connection){
 
 module.exports = {
     getLocation: getLocation,
-    // getBeaches: getBeaches, 
+    getNorthBeaches: getNorthBeaches, 
     // addWave: addWave,
 
 }

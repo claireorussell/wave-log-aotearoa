@@ -7,7 +7,7 @@ exports.up = function(knex) {
       table.integer('difficulty')
       table.string('image')
       table.string('region')
-      table.string('island_id')
+      table.string('location_id')
   })
 };
 

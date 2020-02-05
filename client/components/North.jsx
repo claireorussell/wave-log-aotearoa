@@ -1,34 +1,63 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { getNorthBeaches } from '../api/index'
+//import data from getBeaches api file
 
-const North = (props) => {
-    console.log(props)
-    return (
-        <div>
+
+
+class North extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            beachData: []
+        }
+
+    }
+
+
+
+    componentDidMount() {
+        console.log('hi')
+        getNorthBeaches()
+            .then(beaches => {
+                console.log(beaches)
+                this.setState({ beachData: beaches })
+            }) // assigning data to a variable to use in render 
+    }
+
+
+
+    render() {
+        return (
             <div>
-                <h1>North island </h1>
-                <button className='btn btn-warning'><Link to={'/'}>home</Link></button>
+                <div>
+                    <h1>North island</h1>
+                    <button className='btn btn-warning'><Link to={'/'}>home</Link></button>
+                </div>
+
+
+                {this.state.beachData.map(beach => {
+                    console.log(beach)
+                    return (
+                        <section>
+                            <h3>{beach.name}</h3>
+                            <img src={beach.image} />
+                        </section>
+                    )
+                })}
+
             </div>
-            <section>
-                <ul>
-                    <li>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    )
+        )
+    }
 }
 
 export default North
 
 
 
-/* 
-create route file to use new server route / 
-create db func to return all data
-create api func holding res.body
-turn into class
-comdidmount 
+/*
+create route file to use new server route /
 
 */
