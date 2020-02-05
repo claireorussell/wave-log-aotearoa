@@ -14,16 +14,21 @@ function getNorthBeaches(db = connection){
     .select('*')
 }
 
-// function addWave(newBeach, db = connection) {
-//     // console.log(newBeach)
-//     return db('beach')
-//     .insert(newBeach)
-// }
+function getSouthBeaches(db = connection){
+    return db('Waves')
+    .where('location_id', '=', '2')
+    .select('*')
+}
 
+function shareBeach(db = connection) {
+    return db('Waves')
+    .insert()
+    
+}
 
 module.exports = {
     getLocation: getLocation,
     getNorthBeaches: getNorthBeaches, 
-    // addWave: addWave,
-
+    getSouthBeaches: getSouthBeaches, 
+    shareBeach: shareBeach
 }

@@ -3,7 +3,6 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/locations', (req, res) => {
-    console.log('hi')
     db.getLocation()
         .then((island) => {
             console.log(island)
@@ -13,14 +12,31 @@ router.get('/locations', (req, res) => {
 
 
 router.get('/northBeaches', (req, res) => {
-    console.log("I'm a wave i'm a wave i'm a wave")
     db.getNorthBeaches()
-        .then((beaches) => {
+        .then(beaches => {
             console.log(beaches)
             res.json(beaches) // gives this to the body of the request 
         })
 })
 
+
+router.get('/southBeaches', (req, res) => {
+    db.getSouthBeaches()
+    .then(beaches => {
+        console.log(beaches)
+        res.json(beaches)
+    })
+})
+
+
+router.get('/share', (req, res) => {
+    console.log('i like to share')
+    db.shareBeach()
+    .then(beach => {
+        console.log(beach)
+        res.json(beach)
+    })
+})
 
 
 

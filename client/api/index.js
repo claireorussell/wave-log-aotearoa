@@ -17,4 +17,12 @@ export function getNorthBeaches() {
   })
 }
 
+export function getSouthBeaches() {
+  return request
+  .get('/southBeaches')
+  .then(res => {
+    return res.body
+  })
+}
+
 
