@@ -29,12 +29,13 @@ router.get('/southBeaches', (req, res) => {
 })
 
 
-router.get('/share', (req, res) => {
-    console.log('i like to share')
-    db.shareBeach()
-    .then(beach => {
-        console.log(beach)
-        res.json(beach)
+router.post('/share', (req, res) => {
+    console.log(req.body)
+    
+    db.shareBeach(req.body)
+    .then(id => {
+        console.log(id[0])
+        res.json(id[0])
     })
 })
 

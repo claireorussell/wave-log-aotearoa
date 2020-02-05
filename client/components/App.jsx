@@ -12,6 +12,8 @@ import North from './North'
 
 import South from './South'
 
+import Share from './Share'
+
 
 class App extends React.Component{
 
@@ -22,6 +24,7 @@ class App extends React.Component{
         <Route exact path='/' component={Home} />
         <Route path='/North' component={North} />
         <Route path='/South' component={South} />
+        <Route path='/Share' component={Share} />
 
       </div>
     </Router>

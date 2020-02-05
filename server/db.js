@@ -20,9 +20,18 @@ function getSouthBeaches(db = connection){
     .select('*')
 }
 
-function shareBeach(db = connection) {
+function shareBeach(beach, db = connection) {
+    console.log(beach)
     return db('Waves')
-    .insert()
+    .insert({
+        name: beach.name,
+        image: beach.image,
+        swell: beach.swell,
+        difficulty: beach.difficulty,
+        region: beach.region,
+        location_id: beach.location,
+        
+    })
     
 }
 
