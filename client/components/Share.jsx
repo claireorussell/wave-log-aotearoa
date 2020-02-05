@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { shareBeach } from '../api/index'
 
 class Share extends React.Component {
@@ -32,12 +32,16 @@ class Share extends React.Component {
         evt.preventDefault()
         shareBeach(this.state.beach)
     }
-   
+
 
     render() {
         return (
             <div>
-                <h1>Share your wave</h1>
+                <div>
+                    <h1>Share your wave</h1>
+                    <button className='btn btn-warning'><Link to={'/'}>home</Link></button>
+                </div>
+
                 <form onSubmit={this.handleSubmit}>
                     <label>Wave name: </label>
                     <input
@@ -74,9 +78,9 @@ class Share extends React.Component {
                         value={this.state.region}
                         onChange={this.handleChange}
                     />
-                    
+
                     <label>Location: </label>
-                    <select 
+                    <select className="dropDown"
                         name="location_id"
                         value={this.state.location_id}
                         onChange={this.handleChange}>
@@ -85,13 +89,13 @@ class Share extends React.Component {
                     </select>
 
                     <input className="btn btn-warning" type="submit"></input>
-                    
+
                 </form>
             </div>
-                )
-            }
-        
-        
+        )
+    }
+
+
 }
 
 export default Share

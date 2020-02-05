@@ -35,9 +35,9 @@ class South extends React.Component {
                 {this.state.beachData.map(beach => {
                     console.log(beach)
                     return (
-                        <section>
-                            <h3>{beach.name}</h3>
-                            <img src={beach.image} />
+                        <section className='section'>
+                            <h3 className='waveTitle'>{beach.name}</h3>
+                            <img className='beachImage' src={beach.image} />
                         </section>
                     )
                 })}
