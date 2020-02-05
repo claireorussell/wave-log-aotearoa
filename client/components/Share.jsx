@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { shareBeach } from '../api/index'
+import { Redirect } from 'react-router-dom'
 
 class Share extends React.Component {
     constructor(props) {
@@ -31,6 +32,10 @@ class Share extends React.Component {
     handleSubmit = (evt) => {
         evt.preventDefault()
         shareBeach(this.state.beach)
+        .then(() => {
+            return <Redirect  to='/' />
+
+        })
     }
 
 

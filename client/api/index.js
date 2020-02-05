@@ -1,6 +1,6 @@
 import request from 'superagent'
 
-const beachUrl = 'http://localhost:3000/share'
+
 
 export function getLocations() {
   return request 
@@ -28,7 +28,7 @@ export function getSouthBeaches() {
 
 export function shareBeach(beach) {
   return request 
-  .post(beachUrl)
+  .post('/share')
   .send(beach)
   .then(res => res.body)
 }
