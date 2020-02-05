@@ -21,3 +21,14 @@ const North = (props) => {
 }
 
 export default North
+
+
+
+/* 
+create route file to use new server route / 
+create db func to return all data
+create api func holding res.body
+turn into class
+comdidmount 
+
+*/

@@ -12,10 +12,6 @@ import North from './North'
 
 
 class App extends React.Component{
-constructor(props) {
-  super(props)
-}
-
 
   render() {
   return (
