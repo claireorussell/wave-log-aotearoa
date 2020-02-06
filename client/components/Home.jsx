@@ -23,6 +23,7 @@ class Home extends React.Component {
         <div>
             <h2 className='aotearoaTitle'>Aotearoa</h2>
             <h1 className='mainTitle'>Wave log</h1>
+            <img src="http://placegoat.com/200/200" />
             <section>
                 <div>
                     <button className='btn btn-warning'><Link to={'/north'}>North</Link></button>
