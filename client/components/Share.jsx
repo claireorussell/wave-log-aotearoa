@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { shareBeach } from '../api/index'
-import { Redirect } from 'react-router-dom'
+
 
 class Share extends React.Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class Share extends React.Component {
                 swell: 0,
                 difficulty: 0,
                 region: '',
-                location_id: 1,
+                location_id: 1, //dropdown starts on north so if no change it will always be 1(north)
             }
         }
     }
@@ -24,16 +24,16 @@ class Share extends React.Component {
         this.setState({
             beach: {
                 ...this.state.beach,
-                [evt.target.name]: evt.target.value
+                [evt.target.name]: evt.target.value // sets state of the beach to the form input(evt)
             }
         })
     }
 
     handleSubmit = (evt) => {
         evt.preventDefault()
-        shareBeach(this.state.beach)
+        shareBeach(this.state.beach) // func lives in api file changes the state
         .then(() => {
-            return <Redirect  to='/' />
+            this.props.history.push('/') // different way to redirect after the form posts back to database
 
         })
     }

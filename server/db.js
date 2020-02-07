@@ -20,7 +20,7 @@ function getSouthBeaches(db = connection){
     .select('*')
 }
 
-function shareBeach(beach, db = connection) {
+function shareBeach(beach, db = connection) { // called from the routes folder
     console.log(beach)
     return db('Waves')
     .insert({

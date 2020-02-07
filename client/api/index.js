@@ -28,7 +28,7 @@ export function getSouthBeaches() {
 
 export function shareBeach(beach) {
   return request 
-  .post('/share')
+  .post('/share') // posts info to database
   .send(beach)
   .then(res => res.body)
 }
