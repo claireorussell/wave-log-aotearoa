@@ -20,7 +20,7 @@ class Home extends React.Component {
 
     render() {
     return (
-        <div>
+        <div className='homeBody'>
             <h2 className='aotearoaTitle'>Aotearoa</h2>
             <h1 className='mainTitle'>Wave log</h1>
            

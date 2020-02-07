@@ -26,22 +26,24 @@ class South extends React.Component {
     render() {
         return (
             <div>
-                <div>
+
+                <Link to={'/'}><button className='btn btn-warning'>home</button></Link>
+                <div className='smallBody'>
                     <h1>South island</h1>
-                    <button className='btn btn-warning'><Link to={'/'}>home</Link></button>
+
+
+
+
+                    {this.state.beachData.map(beach => {
+                        console.log(beach)
+                        return (
+                            <section className='section'>
+                                <h3 className='waveTitle'>{beach.name}</h3>
+                                <img className='beachImage' src={beach.image} />
+                            </section>
+                        )
+                    })}
                 </div>
-
-
-                {this.state.beachData.map(beach => {
-                    console.log(beach)
-                    return (
-                        <section className='section'>
-                            <h3 className='waveTitle'>{beach.name}</h3>
-                            <img className='beachImage' src={beach.image} />
-                        </section>
-                    )
-                })}
-
             </div>
         )
     }

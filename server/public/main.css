@@ -79,8 +79,7 @@ Wave display page
     margin:0pc;
     padding: 1pc;
     font-weight: bolder;
-    background-color: rgb(238, 225, 121);
-    border-radius: 2pc 2pc 0pc 0pc;
+    font-size: 40px;
 }
 .info {
     border-radius: 0pc 0pc 2pc 2pc;
@@ -96,5 +95,6 @@ Wave display page
 .beachImage {
     width: 50pc;
     height:25pc;
-
+    border-radius: 20px;
+    border: 6px solid white;
 }
