@@ -29,7 +29,7 @@ function shareBeach(beach, db = connection) {
         swell: beach.swell,
         difficulty: beach.difficulty,
         region: beach.region,
-        location_id: beach.location,
+        location_id: beach.location_id,
         
     })
     

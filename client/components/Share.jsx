@@ -15,7 +15,7 @@ class Share extends React.Component {
                 swell: 0,
                 difficulty: 0,
                 region: '',
-                location_id: 0,
+                location_id: 1,
             }
         }
     }
