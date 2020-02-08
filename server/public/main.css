@@ -1,100 +1,106 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-image: url(https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80);
     background-size: cover;
-    padding: 5pc 18pc;
+    background-repeat: no-repeat;
     color: navy;
+    font-size: 20px;
 }
+.homeBody {
+    padding: 100px 250px;
+    
+}
+.compBody {
+    padding: 25px 250px ;
+}
+
 
 h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 7pc; 
-    margin: 10px 0px;
+    font-size: 160px; 
+   text-shadow: 4px 4px yellow;
+   color: white;
+}
+h2 {
+    font-size: 50px;
+    color: white;
 }
 
-h2 {
-    font-size: 3pc;
-    margin: 0px;
-    color: navy;
-    
-}
 
 .btn {
-    font-size: 1.5pc;
-    margin: 0.5pc;
-    color: rgb(32, 183, 210);
-    height: 3pc;
-    
+    font-size: 25px;
+    color: white;
+    margin: 2px;
+    height: 50px ;
 }
-
 .btn a {
     text-decoration: none !important;
 }
 
+
 /* 
 Add wave page
 */
+
 form {
     text-align: left;
     border: 1px solid white;
     font-size: 1pc;
     background-color: rgba(255, 255, 255, .75);
-    width: 30pc;
+    width: 470px;
     font-weight: bold;
     color: navy;
-    padding: 1pc;
+    padding: 10px;
+    margin: 5px;
 }
 
 label {
-    height:1pc;
-    padding: 1pc 0pc;
+    height:10px;
+    padding: 10px 0px;
 }
 
 input {
-    height: 2pc;
-    width: 28pc;
+    height: 35px;
+    width: 445px;
 }
 
-.submit {
-    font-size: 1.5pc;
-}
-
-.dropDown {
+.dropDownLocationId {
     height: 2pc;
     width: 28pc;
-    
+    margin-bottom: 20px;
 }
 
 /* 
 Wave display page
 */
 
-
 .section {
-    width: 50pc;
+    display: inline-block;
+    margin: 5px;
+}
+
+.pageTitle {
+    font-size: 120px;
+    text-shadow: 2px 2px yellow;
+
 }
 
 .waveTitle {
-    color: navy;
-    margin:0pc;
-    padding: 1pc;
-    font-weight: bolder;
-    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px yellow;
+    font-size: 70px;
+    width: 460px;
+    padding: 20px 0px 20px 0px;
 }
 .info {
-    border-radius: 0pc 0pc 2pc 2pc;
-    font-size: 1.5pc;
     text-align: left;
     border: 1px solid white;
     background-color: rgba(255, 255, 255, .75);
-    margin: 0pc 0pc 5pc;
-    color: rgb(0, 157, 255);
-    padding: 1pc;
+    border: 2px solid grey;
 }
 
 .beachImage {
-    width: 50pc;
-    height:25pc;
+    width: 460px;
+    height:250px;
     border-radius: 20px;
-    border: 6px solid white;
+    border: 6px solid rgb(32, 183, 210);
 }

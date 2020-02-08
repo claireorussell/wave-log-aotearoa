@@ -9,9 +9,13 @@ class South extends React.Component {
         super(props)
 
         this.state = {
-            beachData: []
+            beachData: [],
+            beachImg: true
         }
+        this.handleChange = this.handleChange.bind(this);
     }
+
+
     componentDidMount() {
         console.log('hi')
         getSouthBeaches()
@@ -22,28 +26,44 @@ class South extends React.Component {
     }
 
 
+    handleChange(e) {
+        e.preventDefault()
+        if (this.state.beachImg == true) {
+            this.setState({
+                beachImg: false,
+            })
+        } else {
+            this.setState({
+                beachImg: true,
+            })
+        }
+    }
+
 
     render() {
         return (
-            <div>
-
-                <Link to={'/'}><button className='btn btn-warning'>home</button></Link>
-                <div className='smallBody'>
-                    <h1>South island</h1>
-
-
-
-
-                    {this.state.beachData.map(beach => {
-                        console.log(beach)
-                        return (
-                            <section className='section'>
-                                <h3 className='waveTitle'>{beach.name}</h3>
-                                <img className='beachImage' src={beach.image} />
-                            </section>
-                        )
-                    })}
+            <div className='compBody'>
+                <div>
+                    <h1 className='pageTitle'>South island</h1>
+                    <Link to={'/'}><button className='btn btn-warning'>Wave home</button></Link>
                 </div>
+
+
+
+                {this.state.beachData.map(beach => {
+                    console.log(beach)
+                    return (
+                        <section className='section' onClick={this.handleChange}>
+                            <h3 className='waveTitle'>{beach.name}</h3>
+                            {this.state.beachImg == true ? <img className='beachImage' src={beach.image} /> : <div className='info'>
+                                <p>Find me in {beach.region} region</p>
+                                <p>My average swell size is {beach.swell}</p>
+                                <p>The level of difficulty is {beach.difficulty}</p>
+                            </div>}
+                        </section>
+                    )
+                })}
+
             </div>
         )
     }

@@ -22,9 +22,9 @@ class App extends React.Component{
     <Router>
       <div>
         <Route exact path='/' component={Home} />
-        <Route path='/North' component={North} />
-        <Route path='/South' component={South} />
-        <Route path='/Share' component={Share} />
+        <Route path='/north' component={North} />
+        <Route path='/south' component={South} />
+        <Route path='/share' component={Share} />
       </div>
     </Router>
 
