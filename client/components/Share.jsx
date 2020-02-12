@@ -41,10 +41,10 @@ class Share extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='compBody'>
                 <div>
-                    <h1>Share your wave</h1>
-                    <button className='btn btn-warning'><Link to={'/'}>home</Link></button>
+                    <h1 className='pageTitle'>Share your wave</h1>
+                    <button className='btn btn-warning'><Link to={'/'}>Wave home</Link></button>
                 </div>
 
                 <form onSubmit={this.handleSubmit}>
@@ -85,7 +85,7 @@ class Share extends React.Component {
                     />
 
                     <label>Location: </label>
-                    <select className="dropDown"
+                    <select className="dropDownLocationId"
                         name="location_id"
                         value={this.state.location_id}
                         onChange={this.handleChange}>
