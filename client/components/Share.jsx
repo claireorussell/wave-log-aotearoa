@@ -1,6 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import { shareBeach } from '../api/index'
+
+import { connect } from 'react-redux'
 
 
 class Share extends React.Component {
@@ -9,7 +11,7 @@ class Share extends React.Component {
 
 
         this.state = {
-            beach: {
+            beaches: {
                 name: '',
                 image: '',
                 swell: 0,
@@ -19,19 +21,22 @@ class Share extends React.Component {
             }
         }
     }
-
+ 
+    // keep as is
     handleChange = (evt) => {
         this.setState({
-            beach: {
+            beaches: {
                 ...this.state.beach,
                 [evt.target.name]: evt.target.value // sets state of the beach to the form input(evt)
             }
         })
     }
 
+
     handleSubmit = (evt) => {
         evt.preventDefault()
-        shareBeach(this.state.beach) // func lives in api file changes the state
+        // shareBeach(this.state.beach) // func lives in api file changes the state
+        this.props.dispatch(fetchBeaches(this.state.beaches))
         .then(() => {
             this.props.history.push('/') // different way to redirect after the form posts back to database
 
@@ -52,42 +57,42 @@ class Share extends React.Component {
                     <input
                         type='text'
                         name='name'
-                        value={this.state.name}
+                        value={this.state.beaches.name}
                         onChange={this.handleChange}
                     />
                     <label>Picture: </label>
                     <input
                         type='text'
                         name='image'
-                        value={this.state.image}
+                        value={this.state.beaches.image}
                         onChange={this.handleChange}
                     />
                     <label>Average swell (ft): </label>
                     <input
                         type='text'
                         name='swell'
-                        value={this.state.swell}
+                        value={this.state.beaches.swell}
                         onChange={this.handleChange}
                     />
                     <label>Difficulty level: </label>
                     <input
                         type='text'
                         name='difficulty'
-                        value={this.state.difficulty}
+                        value={this.state.beaches.difficulty}
                         onChange={this.handleChange}
                     />
                     <label>Region: </label>
                     <input
                         type='text'
                         name='region'
-                        value={this.state.region}
+                        value={this.state.beaches.region}
                         onChange={this.handleChange}
                     />
 
                     <label>Location: </label>
                     <select className="dropDownLocationId"
                         name="location_id"
-                        value={this.state.location_id}
+                        value={this.state.beaches.location_id}
                         onChange={this.handleChange}>
                         <option value="1">North</option>
                         <option value="2">South</option>
@@ -103,4 +108,4 @@ class Share extends React.Component {
 
 }
 
-export default Share
+export default connect()(Share)

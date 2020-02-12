@@ -3,22 +3,23 @@ const config = require('../knexfile')[environment]
 const connection = require('knex')(config)
 
 
-function getLocation(db = connection){
-    return db('Island')
-    .select('*')
+function getBeaches(db = connection) {
+    return db('waves')
 }
 
-function getNorthBeaches(db = connection){
-    return db('Waves')
-    .where('location_id', '=', '1')
-    .select('*')
-}
 
-function getSouthBeaches(db = connection){
-    return db('Waves')
-    .where('location_id', '=', '2')
-    .select('*')
-}
+
+// function getNorthBeaches(db = connection){
+//     return db('Waves')
+//     .where('location_id', '=', '1')
+//     .select('*')
+// }
+
+// function getSouthBeaches(db = connection){
+//     return db('Waves')
+//     .where('location_id', '=', '2')
+//     .select('*')
+// }
 
 function shareBeach(beach, db = connection) { // called from the routes folder
     console.log(beach)
@@ -36,8 +37,8 @@ function shareBeach(beach, db = connection) { // called from the routes folder
 }
 
 module.exports = {
-    getLocation: getLocation,
-    getNorthBeaches: getNorthBeaches, 
-    getSouthBeaches: getSouthBeaches, 
+    // getNorthBeaches: getNorthBeaches, 
+    // getSouthBeaches: getSouthBeaches, 
+    getBeaches: getBeaches,
     shareBeach: shareBeach
 }

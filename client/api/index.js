@@ -1,7 +1,6 @@
 import request from 'superagent'
 
 
-
 export function getLocations() {
   return request 
   .get('/locations') // calls the server router
