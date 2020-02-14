@@ -1,43 +1,34 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-import { getSouthBeaches } from '../api/index'
+import { getSouthBeaches } from '../actions/index'
 
 class South extends React.Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            beachData: [],
-            beachImg: true
-        }
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-
+        // state = {
+        //     beachImg: true
+        // }
+    
+        
     componentDidMount() {
-        console.log('hi')
-        getSouthBeaches()
-            .then(beaches => {
-                console.log(beaches)
-                this.setState({ beachData: beaches })
-            }) // assigning data to a variable to use in render 
+        this.props.dispatch(getSouthBeaches())
     }
 
 
-    handleChange(e) {
-        e.preventDefault()
-        if (this.state.beachImg == true) {
-            this.setState({
-                beachImg: false,
-            })
-        } else {
-            this.setState({
-                beachImg: true,
-            })
-        }
-    }
+    // handleChange(e) {
+    //     e.preventDefault()
+    //     if (this.state.beachImg == true) {
+    //         this.setState({
+    //             beachImg: false,
+    //         })
+    //     } else {
+    //         this.setState({
+    //             beachImg: true,
+    //         })
+    //     }
+    // }
 
 
     render() {
@@ -50,7 +41,7 @@ class South extends React.Component {
 
 
 
-                {this.state.beachData.map(beach => {
+                {this.props.beaches.map(beach => {
                     console.log(beach)
                     return (
                         <section className='section' onClick={this.handleChange}>
@@ -71,4 +62,10 @@ class South extends React.Component {
 
 }
 
-export default South
+function mapStateToProps(state) {
+    return {
+        beaches: state.beaches
+    }
+}
+
+export default connect(mapStateToProps)(South)

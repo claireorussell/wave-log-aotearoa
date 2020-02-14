@@ -3,27 +3,21 @@ const config = require('../knexfile')[environment]
 const connection = require('knex')(config)
 
 
-function getBeaches(db = connection) {
+function getNorthBeaches(db = connection) {
     return db('waves')
+    .where('location_id', '=', '1')
+    .select('*')
 }
 
-
-
-// function getNorthBeaches(db = connection){
-//     return db('Waves')
-//     .where('location_id', '=', '1')
-//     .select('*')
-// }
-
-// function getSouthBeaches(db = connection){
-//     return db('Waves')
-//     .where('location_id', '=', '2')
-//     .select('*')
-// }
+function getSouthBeaches(db = connection){
+    return db('waves')
+    .where('location_id', '=', '2')
+    .select('*')
+}
 
 function shareBeach(beach, db = connection) { // called from the routes folder
     console.log(beach)
-    return db('Waves')
+    return db('waves')
     .insert({
         name: beach.name,
         image: beach.image,
@@ -36,9 +30,8 @@ function shareBeach(beach, db = connection) { // called from the routes folder
     
 }
 
-module.exports = {
-    // getNorthBeaches: getNorthBeaches, 
-    // getSouthBeaches: getSouthBeaches, 
-    getBeaches: getBeaches,
+module.exports = {  
+    getNorthBeaches: getNorthBeaches,
+    getSouthBeaches: getSouthBeaches,
     shareBeach: shareBeach
 }

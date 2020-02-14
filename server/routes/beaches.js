@@ -5,12 +5,16 @@ const router = express.Router()
 
 router.use(express.json())
 
-router.get('/beaches', (req, res) => {
-  db.getBeaches()
+router.get('/northbeaches', (req, res) => {
+  db.getNorthBeaches()
     .then(beaches => res.json(beaches))
-
     // for the database function that returns athe db table 
+})
 
+router.get('/southbeaches', (req, res) => {
+  db.getSouthBeaches()
+    .then(beaches => res.json(beaches))
+    // for the database function that returns athe db table 
 })
 
 module.exports = router
