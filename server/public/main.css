@@ -1,5 +1,6 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
     background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80);
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,24 +18,31 @@ body {
 
 h1 {
     font-size: 160px; 
-   text-shadow: 4px 4px yellow;
-   color: white;
+    text-shadow: 4px 4px rgba(255, 217, 0, 0.838);
+    color: white;
 }
+
+.mainTitle {
+    margin-bottom: 40px;
+}
+
 h2 {
     font-size: 50px;
     color: white;
 }
 
-
 .btn {
     font-size: 25px;
-    color: white;
+    color: navy;
     margin: 2px;
-    height: 50px ;
+    height: 50px;
+    width: auto;
+    padding:5px 10px 5px 10px;
 }
 .btn a {
     text-decoration: none !important;
 }
+
 
 
 /* 
@@ -73,29 +81,32 @@ input {
 Wave display page
 */
 
-.section {
-    display: inline-block;
-    margin: 5px;
-}
+
 
 .pageTitle {
     font-size: 120px;
-    text-shadow: 2px 2px yellow;
+    text-shadow: 2px 2px rgba(255, 217, 0, 0.838);
 
 }
 
-.waveTitle {
-    color: white;
-    text-shadow: 2px 2px yellow;
-    font-size: 70px;
-    width: 460px;
-    padding: 20px 0px 20px 0px;
-}
 .info {
     text-align: left;
     border: 1px solid white;
-    background-color: rgba(255, 255, 255, .75);
-    border: 2px solid grey;
+    background-color: rgba(255, 255, 255, 0.577);
+    border: 2px solid rgb(172, 172, 172);
+    margin-top: 20px;
+}
+
+.section {
+    margin: 5px;
+    padding:50px;
+}
+
+.waveTitle {
+    color: navy;
+    font-size: 70px;
+    width: 460px;
+    padding: 0px 0px 20px 0px;
 }
 
 .beachImage {

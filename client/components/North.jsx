@@ -1,29 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-import { getNorthBeaches } from '../api/index'
+import { connect } from 'react-redux'
 //import data from getBeaches api file
+import { getNorthBeaches } from '../actions/index'
 
 
 
 class North extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            beachData: [],
-            beachImg: true
-        }
-        this.handleChange = this.handleChange.bind(this);
+    
+    state = {
+        beachImg: true
     }
 
     componentDidMount() {
-        console.log('hi')
-        getNorthBeaches()
-            .then(beaches => {
-                console.log(beaches)
-                this.setState({ beachData: beaches })
-            }) // assigning data to a variable to use in render 
+        this.props.dispatch(getNorthBeaches())
+       
     }
 
     handleChange(e) {
@@ -42,18 +33,17 @@ class North extends React.Component {
 
     render() {
         return (
-            <div className='compBody'>
+            <section className='compBody'>
                 <div>
                     <h1 className='pageTitle'>North island</h1>
-                    <button className='btn btn-warning'><Link to={'/'}>Wave home</Link></button>
+                    <Link to={'/'}><button className='btn btn-warning'>Home</button></Link>
                 </div>
-
-                {this.state.beachData.map(beach => {
-                    console.log(beach)
+                <div className='info'>
+                {this.props.beaches.map(beach => {
                     return (
                         <section className='section' onClick={this.handleChange}>
                             <h3 className='waveTitle'>{beach.name}</h3>
-                            {this.state.beachImg == true ? <img className='beachImage' src={beach.image} /> : <div className='info'>
+                            {this.props.beachImg == true ? <img className='beachInfo' src={beach.image} /> : <div>
                                 <p>Find me in {beach.region} region</p>
                                 <p>My average swell size is {beach.swell}</p>
                                 <p>The level of difficulty is {beach.difficulty}</p>
@@ -62,13 +52,20 @@ class North extends React.Component {
                         </section>
                     )
                 })}
-
             </div>
+            </section>
         )
     }
 }
 
-export default North
+
+function mapStateToProps(state){
+    return {
+    beaches: state.beaches
+    }
+}
+
+export default connect(mapStateToProps)(North)
 
 
 

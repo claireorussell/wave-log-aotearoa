@@ -1,22 +1,8 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom'
 
-import { getLocations } from '../api/index'
 
 class Home extends React.Component {
-
-    locationData = {} // var to update in didmount and access in render
-
-    componentDidMount() {
-        getLocations()
-            .then((locations) => { // dealing with async --- promises
-                this.locationData = locations
-                console.log(this.locationData)
-            })
-
-    }
-
 
     render() {
         return (
@@ -24,9 +10,9 @@ class Home extends React.Component {
                 <h2 className='aotearoaTitle'>Aotearoa</h2>
                 <h1 className='mainTitle'>Wave log</h1>
                 <section>
-                    <button className='btn btn-warning'><Link to={'/north'}>North</Link></button>
-                    <button className='btn btn-warning'><Link to={'/south'}>South</Link></button>
-                    <button className='btn btn-warning'><Link to={'/share'}>Share</Link></button>
+                    <Link to={'/north'}><button className='btn btn-warning'>North</button></Link>
+                    <Link to={'/south'}><button className='btn btn-warning'>South</button></Link>
+                    <Link to={'/share'}><button className='btn btn-warning'>Log your wave</button></Link>
                 </section>
             </div>
         )
