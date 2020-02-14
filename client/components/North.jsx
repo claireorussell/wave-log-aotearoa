@@ -38,7 +38,7 @@ class North extends React.Component {
             })
         }
     }
-
+// have each beach in it's own component
 
     render() {
         return (
@@ -51,6 +51,8 @@ class North extends React.Component {
                 {this.state.beachData.map(beach => {
                     console.log(beach)
                     return (
+
+                        // <Beach pass props></Beach>
                         <section className='section' onClick={this.handleChange}>
                             <h3 className='waveTitle'>{beach.name}</h3>
                             {this.state.beachImg == true ? <img className='beachImage' src={beach.image} /> : <div className='info'>
