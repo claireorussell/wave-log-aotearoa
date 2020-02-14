@@ -1,22 +1,8 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom'
 
-import { getLocations } from '../api/index'
 
 class Home extends React.Component {
-
-    locationData = {} // var to update in didmount and access in render
-
-    componentDidMount() {
-        getLocations()
-            .then((locations) => { // dealing with async --- promises
-                this.locationData = locations
-                console.log(this.locationData)
-            })
-
-    }
-
 
     render() {
         return (

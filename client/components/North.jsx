@@ -10,13 +10,12 @@ class North extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            beachData: [],
-            beachImg: true
-        }
-        this.handleChange = this.handleChange.bind(this);
     }
 
+    // need to dispatch to the getBeaches function in Actions folder
+
+
+    
     componentDidMount() {
         console.log('hi')
         getNorthBeaches()
