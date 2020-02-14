@@ -41,7 +41,7 @@ class Share extends React.Component {
         this.props.dispatch(saveBeach(this.state.beach))
         .then(() => {
             this.props.history.push('/') // different way to redirect after the form posts back to database
-        })
+        }) // doesn't like this!!! the .then is undefined?
     }
 
 
@@ -50,7 +50,7 @@ class Share extends React.Component {
             <div className='compBody'>
                 <div>
                     <h1 className='pageTitle'>Share your wave</h1>
-                    <button className='btn btn-warning'><Link to={'/'}>Wave home</Link></button>
+                    <Link to={'/'}><button className='btn btn-warning'>Home</button></Link>
                 </div>
 
                 <form onSubmit={this.handleSubmit}>
@@ -107,10 +107,10 @@ class Share extends React.Component {
     }
 }
 
-// function mapStateToProps(state) {
-//     return {
-//         beach: state.beach
-//     }
-// }
+function mapStateToProps(state) {
+    return {
+        beach: state.beach
+    }
+}
 
-export default connect()(Share)
+export default connect(mapStateToProps)(Share)

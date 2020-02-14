@@ -15,7 +15,7 @@ function getSouthBeaches(db = connection){
     .select('*')
 }
 
-function shareBeach(beach, db = connection) { // called from the routes folder
+function saveBeach(beach, db = connection) { // called from the routes folder
     console.log(beach)
     return db('waves')
     .insert({
@@ -25,7 +25,6 @@ function shareBeach(beach, db = connection) { // called from the routes folder
         difficulty: beach.difficulty,
         region: beach.region,
         location_id: beach.location_id,
-        
     })
     
 }
@@ -33,5 +32,5 @@ function shareBeach(beach, db = connection) { // called from the routes folder
 module.exports = {  
     getNorthBeaches: getNorthBeaches,
     getSouthBeaches: getSouthBeaches,
-    shareBeach: shareBeach
+    saveBeach: saveBeach
 }

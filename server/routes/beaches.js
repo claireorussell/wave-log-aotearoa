@@ -17,4 +17,9 @@ router.get('/southbeaches', (req, res) => {
     // for the database function that returns athe db table 
 })
 
+router.post('/saveBeach', (req, res) => {
+  db.saveBeach(req.body)
+  .then(id => res.json(id[0]))
+})
+
 module.exports = router
