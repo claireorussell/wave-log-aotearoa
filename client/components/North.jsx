@@ -31,11 +31,11 @@ class North extends React.Component {
                         {this.props.beaches.map(beach => {
                             return (
                                 <div className='row'>
-                                    <div className='col-md-6'>
                                         <h3 className='waveTitle'>{beach.name}</h3>
+                                        <div className='col-8'>
                                         <img className='img'src={beach.image} />
                                     </div>
-                                    <div className='col-md-6'>
+                                    <div className='col-4 info'>
                                         <p>Find me in {beach.region} region</p>
                                         <p>My average swell size is {beach.swell}</p>
                                         <p>The level of difficulty is {beach.difficulty}</p>

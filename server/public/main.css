@@ -4,7 +4,7 @@ body {
     /* background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80); */
     background-size: cover;
     background-repeat: no-repeat;
-    color: grey;
+    color: black;
     font-size: 20px;
 }
 
@@ -23,12 +23,12 @@ body {
 
 h1 {
     font-size: 230px; 
-    color: #15655f;
+    color: black;
 }
 
 h2 {
     font-size: 80px;
-    color: #4b4b4b;
+    color: black;
 }
 
 .btn {
@@ -41,7 +41,7 @@ h2 {
 }
 .on {
     /* text-decoration: none !important; */
-    color:#4b4b4b;
+    color: black;
     
 }
 
@@ -58,7 +58,7 @@ form {
     /* background-color: rgba(255, 255, 255, .75);*/
     width: 470px;
     font-weight: bold;
-    color: navy;
+    color: black;
     padding: 10px;
     margin: 5px;
 }
@@ -93,27 +93,31 @@ Wave display page
     color:black;
     font-size: 120px;
     padding: 30px 0px 30px 100px;
+    text-align: center;
 
+}
+
+.info {
+    text-align: left;
+    padding: 30px 0px 20px 0px;
+    font-size: 25px;
 }
 
 .col-lg-6 {
-    padding: 30px 10px 30px 50px;
+    padding: 30px 0px 30px 50px;
 }
 
 .img {
-    width: 300px;
+    width: 500px;
+    height: 300px;
+    padding: 20px 0px 20px 50px;
+    
 }
 
 .waveTitle {
-    color: #67e6dc;
+    color: black;
     font-size: 70px;
     width: 460px;
-    padding: 0px 0px 20px 0px;
+    padding: 20px 50px 20px 60px;
 }
 
-.beachImage {
-    width: 460px;
-    height:250px;
-    border-radius: 20px;
-    border: 6px solid rgb(32, 183, 210);
-}
