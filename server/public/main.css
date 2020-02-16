@@ -1,46 +1,48 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-family: 'Courier New', Courier, monospace; */
-    background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80);
+    font-family: 'Fjalla One', sans-serif;
+    /* background-image: url(./images/20190627_210337.jpg); */
+    /* background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80); */
     background-size: cover;
     background-repeat: no-repeat;
-    color: navy;
+    color: grey;
     font-size: 20px;
 }
-.homeBody {
-    padding: 100px 250px;
-    
-}
-.compBody {
-    padding: 25px 250px ;
+
+
+.container {
+    margin: 0px;
 }
 
+.col-3 {
+        background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80);
+    background-color: white;
+    height: 1800px;
+    padding-top: 10px;
+    background-size: cover;
+}
 
 h1 {
-    font-size: 160px; 
-    text-shadow: 4px 4px rgba(255, 217, 0, 0.838);
-    color: white;
-}
-
-.mainTitle {
-    margin-bottom: 40px;
+    font-size: 230px; 
+    color: #15655f;
 }
 
 h2 {
-    font-size: 50px;
-    color: white;
+    font-size: 80px;
+    color: #4b4b4b;
 }
 
 .btn {
     font-size: 25px;
-    color: navy;
-    margin: 2px;
+    color:#67e6dc;
+    margin: 5px;
     height: 50px;
-    width: auto;
+    width: 250px;
     padding:5px 10px 5px 10px;
 }
-.btn a {
-    text-decoration: none !important;
+.on {
+    /* text-decoration: none !important; */
+    color:#4b4b4b;
+    
 }
 
 
@@ -52,8 +54,8 @@ Add wave page
 form {
     text-align: left;
     border: 1px solid white;
-    font-size: 1pc;
-    background-color: rgba(255, 255, 255, .75);
+    font-size: 20px;
+    /* background-color: rgba(255, 255, 255, .75);*/
     width: 470px;
     font-weight: bold;
     color: navy;
@@ -77,6 +79,10 @@ input {
     margin-bottom: 20px;
 }
 
+.formBtn {
+    text-align: left;
+}
+
 /* 
 Wave display page
 */
@@ -84,26 +90,22 @@ Wave display page
 
 
 .pageTitle {
+    color:black;
     font-size: 120px;
-    text-shadow: 2px 2px rgba(255, 217, 0, 0.838);
+    padding: 30px 0px 30px 100px;
 
 }
 
-.info {
-    text-align: left;
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.577);
-    border: 2px solid rgb(172, 172, 172);
-    margin-top: 20px;
+.col-lg-6 {
+    padding: 30px 10px 30px 50px;
 }
 
-.section {
-    margin: 5px;
-    padding:50px;
+.img {
+    width: 300px;
 }
 
 .waveTitle {
-    color: navy;
+    color: #67e6dc;
     font-size: 70px;
     width: 460px;
     padding: 0px 0px 20px 0px;

@@ -17,7 +17,8 @@ class App extends React.Component{
         <Route path='/north' component={North} />
         <Route path='/south' component={South} />
         <Route path='/share' component={Share} />
-      </div>
+        {/* <Footer Footer={Footer} /> */}
+        </div>
     </Router>
 
   )}
