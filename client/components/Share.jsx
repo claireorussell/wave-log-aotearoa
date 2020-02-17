@@ -48,58 +48,75 @@ class Share extends React.Component {
     render() {
         return (
             <div className='container'>
-                        <h1 className='pageTitle'>Share your wave</h1>
+                <h1 className='pageTitle'>Share your wave</h1>
 
-                        <form onSubmit={this.handleSubmit}>
-                            <label>Wave name: </label>
-                            <input
-                                type='text'
-                                name='name'
-                                value={this.state.beach.name}
-                                onChange={this.handleChange}
-                            />
-                            <label>Picture: </label>
-                            <input
-                                type='text'
-                                name='image'
-                                value={this.state.beach.image}
-                                onChange={this.handleChange}
-                            />
-                            <label>Average swell (ft): </label>
-                            <input
-                                type='text'
-                                name='swell'
-                                value={this.state.beach.swell}
-                                onChange={this.handleChange}
-                            />
-                            <label>Difficulty level: </label>
-                            <input
-                                type='text'
-                                name='difficulty'
-                                value={this.state.beach.difficulty}
-                                onChange={this.handleChange}
-                            />
-                            <label>Region: </label>
-                            <input
-                                type='text'
-                                name='region'
-                                value={this.state.beach.region}
-                                onChange={this.handleChange}
-                            />
+                <form onSubmit={this.handleSubmit}>
+                    <label>Beach name: </label>
+                    <input
+                        type='text'
+                        name='name'
+                        value={this.state.beach.name}
+                        onChange={this.handleChange}
+                    />
+                    <label>Picture: </label>
+                    <input
+                        type='text'
+                        name='image'
+                        value={this.state.beach.image}
+                        onChange={this.handleChange}
+                    />
+                    <label>Average swell (ft): </label>
+                    <input
+                        type='text'
+                        name='swell'
+                        value={this.state.beach.swell}
+                        onChange={this.handleChange}
+                    />
+                    <label>Difficulty level out of 5: </label>
+                    <input
+                        type='text'
+                        name='difficulty'
+                        value={this.state.beach.difficulty}
+                        onChange={this.handleChange}
+                    />
+                    <label>Break (Left or Right): </label>
+                    <input
+                        type='text'
+                        name='break'
+                        value={this.state.beach.break}
+                        onChange={this.handleChange}
+                    />
 
-                            <label>Location: </label>
-                            <select className="dropDownLocationId"
-                                name="location_id"
-                                value={this.state.beach.location_id}
-                                onChange={this.handleChange}>
-                                <option value="1">North</option>
-                                <option value="2">South</option>
-                            </select>
+                    <label>Region: </label>
+                    <input
+                        type='text'
+                        name='region'
+                        value={this.state.beach.region}
+                        onChange={this.handleChange}
+                    />
 
-                            <input className="btn formBtn" type="submit"></input>
+                    <label>Location: </label>
+                    <select className="dropDownLocationId"
+                        name="location_id"
+                        value={this.state.beach.location_id}
+                        onChange={this.handleChange}>
+                        <option value="1">North</option>
+                        <option value="2">South</option>
+                    </select>
 
-                        </form>
-                    </div>
+                    <label >Helpful hints: </label>
+                    <input
+                        className='hintInput'
+                        type='text'
+                        name='extra'
+                        value={this.state.beach.extra}
+                        onChange={this.handleChange}
+                    />
+
+                    <input className="btn formBtn" type="submit"></input>
+
+                </form>
+            </div>
         )
     }
 }

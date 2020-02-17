@@ -16,27 +16,24 @@ class North extends React.Component {
     render() {
         return (
             <div className='container'>
-                        <h1 className='pageTitle'>North island</h1>
+                <h1 className='pageTitle'>North island</h1>
 
-                        {this.props.beaches.map(beach => {
-                            return (
-                                <div className='row'>
-                                        <h3 className='waveTitle'>{beach.name}</h3>
-                                        <div className='col-8'>
-                                        <img className='img'src={beach.image} />
-                                    </div>
-                                    <div className='col-4 info'>
-                                        <p>Find me in {beach.region} region</p>
-                                        <p>My average swell size is {beach.swell}</p>
-                                        <p>The level of difficulty is {beach.difficulty}</p>
-                                    </div>
-                                    </div>
-                            )
-                        })}
-                
+                {this.props.beaches.map(beach => {
+                    return (
+                        // add a link a pop up component to display all information or a ternery to see which type of display you have.... simple display or more info + picture display
+                        <div className='row log'>
+                            <h3 className='waveTitle'>{beach.name}</h3>
+                            <div className='info'>
+                                <p>{beach.region} region</p>
+                                <p>Average swell: {beach.swell}</p>
+                                <p>Difficulty level: {beach.difficulty}</p>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
-           
-            
+
+
         )
     }
 }

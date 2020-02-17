@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    margin: 0px;
+    margin: 20px;
 }
 
 h1 {
@@ -20,7 +20,7 @@ h1 {
 h2 {
     font-size: 80px;
     color: black;
-    padding: 25px ;
+    padding: 20px ;
 }
 
 .btn {
@@ -61,12 +61,12 @@ form {
     text-align: left;
     border: 1px solid white;
     font-size: 20px;
-    /* background-color: rgba(255, 255, 255, .75);*/
+    background-color: rgba(255, 255, 255, .75);
     width: 470px;
     font-weight: bold;
     color: black;
     padding: 10px;
-    margin: 5px;
+    margin: 30px 200px;
 }
 
 label {
@@ -85,14 +85,15 @@ input {
     margin-bottom: 20px;
 }
 
-.formBtn {
-    text-align: left;
+.hintInput {
+    height: 200px;
 }
+
+
 
 /* 
 Wave display page
 */
-
 
 
 .pageTitle {
@@ -103,15 +104,18 @@ Wave display page
 
 }
 
+.log {
+    background-color: rgba(255, 255, 255, 0.42);
+    width: 80%;
+    margin: 20px;
+}
+
 .info {
     text-align: left;
-    padding: 30px 0px 20px 0px;
+    padding: 30px 10px 20px 0px;
     font-size: 25px;
 }
 
-.col-lg-6 {
-    padding: 30px 0px 30px 50px;
-}
 
 .img {
     width: 500px;
@@ -124,6 +128,6 @@ Wave display page
     color: black;
     font-size: 70px;
     width: 460px;
-    padding: 20px 50px 20px 60px;
+    padding: 50px 20px 20px 70px;
 }
 
