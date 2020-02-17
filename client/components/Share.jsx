@@ -48,15 +48,6 @@ class Share extends React.Component {
     render() {
         return (
             <div className='container'>
-                <div className='row'>
-                    <div className='col-md-3'>
-                        <Link to={'/'}><button className='btn'>Home</button></Link>
-                        <Link to={'/north'}><button className='btn on'>North island</button></Link>
-                        <Link to={'/south'}><button className='btn'>South island</button></Link>
-                        <Link to={'/share'}><button className='btn'>Log your wave</button></Link>
-                    </div>
-                    <div className='col-md-9'>
-
                         <h1 className='pageTitle'>Share your wave</h1>
 
                         <form onSubmit={this.handleSubmit}>
@@ -109,8 +100,6 @@ class Share extends React.Component {
 
                         </form>
                     </div>
-                </div>
-            </div>
         )
     }
 }

@@ -1,48 +1,54 @@
 body {
-    font-family: 'Fjalla One', sans-serif;
-    /* background-image: url(./images/20190627_210337.jpg); */
-    /* background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80); */
+    background-image: url(./images/IMG-20190705-WA0001.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: black;
     font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
 }
-
 
 .container {
     margin: 0px;
 }
 
-.col-3 {
-        background-image: url(https://images.unsplash.com/photo-1506710766034-d5b43d2af393?ixlib=rb-1.2.1&auto=format&fit=crop&w=1558&q=80);
-    background-color: white;
-    height: 1800px;
-    padding-top: 10px;
-    background-size: cover;
-}
-
 h1 {
-    font-size: 230px; 
+    font-size: 150px; 
     color: black;
+    padding: 50px 250px;
 }
 
 h2 {
     font-size: 80px;
     color: black;
+    padding: 25px ;
 }
 
 .btn {
     font-size: 25px;
-    color:#67e6dc;
-    margin: 5px;
+    color:rgba(0, 0, 0, 0.516);
+    margin: 25px 5px;
     height: 50px;
-    width: 250px;
-    padding:5px 10px 5px 10px;
+    width: auto;
+    padding:5px;
 }
-.on {
-    /* text-decoration: none !important; */
-    color: black;
-    
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+.btn a {
+    text-decoration: none !important;
+}
+
+.nav {
+    text-align: right;
+    height: 150px;
+    padding: 25px;
+    background-color: white;
+}
+
+.buttons {
+    margin-left: 500px;
 }
 
 

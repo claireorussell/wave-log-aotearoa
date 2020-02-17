@@ -16,16 +16,6 @@ class North extends React.Component {
     render() {
         return (
             <div className='container'>
-                <div className='row'>
-                    <div className='col-3'>
-                        <Link to={'/'}><button className='btn'>Home</button></Link>
-                        <Link to={'/north'}><button className='btn on'>North island</button></Link>
-                        <Link to={'/south'}><button className='btn'>South island</button></Link>
-                        <Link to={'/share'}><button className='btn'>Log your wave</button></Link>
-                    </div>
-
-
-                    <div className='col-9'>
                         <h1 className='pageTitle'>North island</h1>
 
                         {this.props.beaches.map(beach => {
@@ -45,8 +35,8 @@ class North extends React.Component {
                         })}
                 
             </div>
-            </div>
-            </div>
+           
+            
         )
     }
 }
