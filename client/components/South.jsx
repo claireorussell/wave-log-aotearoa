@@ -33,28 +33,24 @@ class South extends React.Component {
 
     render() {
         return (
-            <section className='compBody'>
-                <div>
-                    <h1 className='pageTitle'>South island</h1>
-                    <Link to={'/'}><button className='btn btn-warning'>Home</button></Link>
-                </div>
-                <div className='info'>
+            <div className='container'>
+                <h1 className='pageTitle'>South island</h1>
+
                 {this.props.beaches.map(beach => {
-                    console.log(beach)
                     return (
-                        <section className='section' onClick={this.handleChange}>
+                        <div className='row log'>
                             <h3 className='waveTitle'>{beach.name}</h3>
-                            {this.props.beachImg == true ? <img className='beachInfo' src={beach.image} /> : <div>
-                                <p>Find me in {beach.region} region</p>
-                                <p>My average swell size is {beach.swell}</p>
-                                <p>The level of difficulty is {beach.difficulty}</p>
+                            <div className='info'>
+                                <p>{beach.region} region</p>
+                                <p>Average swell: {beach.swell}</p>
+                                <p>Difficulty level: {beach.difficulty}</p>
                             </div>
-                            }
-                        </section>
+                        </div>
                     )
                 })}
             </div>
-            </section>
+
+
         )
     }
 }

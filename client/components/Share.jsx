@@ -23,38 +23,35 @@ class Share extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
- 
+
     // keep as is
     handleChange = (evt) => {
-        
+
         this.setState({
             beach: {
                 ...this.state.beach,
                 [evt.target.name]: evt.target.value // sets state of the beach to the form input(evt)
-            }, 
-        }) 
+            },
+        })
     }
 
 
     handleSubmit = (evt) => {
         evt.preventDefault()
         this.props.dispatch(saveBeach(this.state.beach))
-        .then(() => {
-            this.props.history.push('/') // different way to redirect after the form posts back to database
-        }) // doesn't like this!!! the .then is undefined?
+            .then(() => {
+                this.props.history.push('/') // different way to redirect after the form posts back to database
+            }) // doesn't like this!!! the .then is undefined?
     }
 
 
     render() {
         return (
-            <div className='compBody'>
-                <div>
-                    <h1 className='pageTitle'>Share your wave</h1>
-                    <Link to={'/'}><button className='btn btn-warning'>Home</button></Link>
-                </div>
+            <div className='container'>
+                <h1 className='pageTitle'>Share your wave</h1>
 
                 <form onSubmit={this.handleSubmit}>
-                    <label>Wave name: </label>
+                    <label>Beach name: </label>
                     <input
                         type='text'
                         name='name'
@@ -75,13 +72,21 @@ class Share extends React.Component {
                         value={this.state.beach.swell}
                         onChange={this.handleChange}
                     />
-                    <label>Difficulty level: </label>
+                    <label>Difficulty level out of 5: </label>
                     <input
                         type='text'
                         name='difficulty'
                         value={this.state.beach.difficulty}
                         onChange={this.handleChange}
                     />
+                    <label>Break (Left or Right): </label>
+                    <input
+                        type='text'
+                        name='break'
+                        value={this.state.beach.break}
+                        onChange={this.handleChange}
+                    />
+
                     <label>Region: </label>
                     <input
                         type='text'
@@ -99,7 +104,16 @@ class Share extends React.Component {
                         <option value="2">South</option>
                     </select>
 
-                    <input className="btn btn-warning" type="submit"></input>
+                    <label >Helpful hints: </label>
+                    <input
+                        className='hintInput'
+                        type='text'
+                        name='extra'
+                        value={this.state.beach.extra}
+                        onChange={this.handleChange}
+                    />
+
+                    <input className="btn formBtn" type="submit"></input>
 
                 </form>
             </div>

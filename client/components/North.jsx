@@ -7,69 +7,42 @@ import { getNorthBeaches } from '../actions/index'
 
 
 class North extends React.Component {
-    
-    state = {
-        beachImg: true
-    }
 
     componentDidMount() {
         this.props.dispatch(getNorthBeaches())
-       
-    }
 
-    handleChange(e) {
-        e.preventDefault()
-        if (this.state.beachImg == true) {
-            this.setState({
-                beachImg: false,
-            })
-        } else {
-            this.setState({
-                beachImg: true,
-            })
-        }
     }
-
 
     render() {
         return (
-            <section className='compBody'>
-                <div>
-                    <h1 className='pageTitle'>North island</h1>
-                    <Link to={'/'}><button className='btn btn-warning'>Home</button></Link>
-                </div>
-                <div className='info'>
+            <div className='container'>
+                <h1 className='pageTitle'>North island</h1>
+
                 {this.props.beaches.map(beach => {
                     return (
-                        <section className='section' onClick={this.handleChange}>
+                        // add a link a pop up component to display all information or a ternery to see which type of display you have.... simple display or more info + picture display
+                        <div className='row log'>
                             <h3 className='waveTitle'>{beach.name}</h3>
-                            {this.props.beachImg == true ? <img className='beachInfo' src={beach.image} /> : <div>
-                                <p>Find me in {beach.region} region</p>
-                                <p>My average swell size is {beach.swell}</p>
-                                <p>The level of difficulty is {beach.difficulty}</p>
+                            <div className='info'>
+                                <p>{beach.region} region</p>
+                                <p>Average swell: {beach.swell}</p>
+                                <p>Difficulty level: {beach.difficulty}</p>
                             </div>
-                            }
-                        </section>
+                        </div>
                     )
                 })}
             </div>
-            </section>
+
+
         )
     }
 }
 
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
     return {
-    beaches: state.beaches
+        beaches: state.beaches
     }
 }
 
 export default connect(mapStateToProps)(North)
-
-
-
-/*
-create route file to use new server route /
-
-*/
