@@ -1,34 +1,56 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 //import data from getBeaches api file
 import { getNorthBeaches } from '../actions/index'
+import ShowMore from './ShowMore'
 
 
 
 class North extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            showMore: false
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
 
     componentDidMount() {
         this.props.dispatch(getNorthBeaches())
 
     }
 
+
+    handleClick() {
+        this.setState({
+            showMore: !this.state.showMore
+        })
+    }
+
+
+
     render() {
+
         return (
             <div className='container'>
                 <h1 className='pageTitle'>North island</h1>
 
-                {this.props.beaches.map(beach => {
+                {this.props.beaches.map((beach, i) => {
                     return (
-                        // add a link a pop up component to display all information or a ternery to see which type of display you have.... simple display or more info + picture display
-                        <div className='row log'>
-                            <h3 className='waveTitle'>{beach.name}</h3>
-                            <div className='info'>
-                                <p>{beach.region} region</p>
-                                <p>Average swell: {beach.swell}</p>
-                                <p>Difficulty level: {beach.difficulty}</p>
+                        <section>
+                            <div className='row log'>
+                                <h3 className='waveTitle'>{beach.name}</h3>
+                                <div className='info'>
+                                    <p>{beach.region} region</p>
+                                    <p>Difficulty level: {beach.difficulty}</p>
+                                
+                                {this.state.showMore && <ShowMore beach={beach} />}
+                                </div>
                             </div>
-                        </div>
+                            {this.state.showMore ? <button className='btn' onClick={this.handleClick}>Show less</button> : <button className='btn' onClick={this.handleClick}>Show more good stuff</button>}
+                        </section>
                     )
                 })}
             </div>

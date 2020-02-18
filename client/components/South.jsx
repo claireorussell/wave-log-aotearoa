@@ -1,33 +1,31 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import ShowMore from './ShowMore'
 import { connect } from 'react-redux'
 
 import { getSouthBeaches } from '../actions/index'
 
 class South extends React.Component {
+    constructor(props) {
+        super(props)
 
-        state = {
-            beachImg: true
+        this.state = {
+            showMore: false
         }
-    
-        
-    componentDidMount() {
-        this.props.dispatch(getSouthBeaches())
+        this.handleClick = this.handleClick.bind(this);
     }
 
 
-    handleChange(e) {
-        e.preventDefault()
-        if (this.state.beachImg == true) {
-            this.setState({
-                beachImg: false,
-            })
-        } else {
-            this.setState({
-                beachImg: true,
-            })
-        }
+    componentDidMount() {
+        this.props.dispatch(getSouthBeaches())
+
+    }
+
+
+    handleClick() {
+        this.setState({
+            showMore: !this.state.showMore
+        })
     }
 
 
@@ -36,16 +34,20 @@ class South extends React.Component {
             <div className='container'>
                 <h1 className='pageTitle'>South island</h1>
 
-                {this.props.beaches.map(beach => {
+                {this.props.beaches.map((beach, i) => {
                     return (
-                        <div className='row log'>
-                            <h3 className='waveTitle'>{beach.name}</h3>
-                            <div className='info'>
-                                <p>{beach.region} region</p>
-                                <p>Average swell: {beach.swell}</p>
-                                <p>Difficulty level: {beach.difficulty}</p>
+                        <section>
+                            <div className='row log'>
+                                <h3 className='waveTitle'>{beach.name}</h3>
+                                <div className='info'>
+                                    <p>{beach.region} region</p>
+                                    <p>Difficulty level: {beach.difficulty}</p>
+                                
+                                {this.state.showMore && <ShowMore beach={beach} />}
+                                </div>
                             </div>
-                        </div>
+                            {this.state.showMore ? <button className='btn' onClick={this.handleClick}>Show less</button> : <button className='btn' onClick={this.handleClick}>Show more good stuff</button>}
+                        </section>
                     )
                 })}
             </div>

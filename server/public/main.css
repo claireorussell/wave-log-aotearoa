@@ -1,3 +1,7 @@
+/* -------------------------------------------- 
+All pages and Home 
+*/
+
 body {
     background-image: url(./images/IMG-20190705-WA0001.jpg);
     background-size: cover;
@@ -12,49 +16,59 @@ body {
 }
 
 h1 {
-    font-size: 150px; 
+    font-size: 80px; 
     color: black;
     padding: 50px 250px;
 }
 
+@media (min-width: 768px) {
+    h1 {
+        font-size: 150px;
+    }
+}
+
+
 h2 {
-    font-size: 80px;
+    font-size: 55px;
     color: black;
     padding: 20px ;
 }
 
-.btn {
-    font-size: 25px;
-    color:rgba(0, 0, 0, 0.516);
-    margin: 25px 5px;
-    height: 50px;
-    width: auto;
-    padding:5px;
-}
-.btn:focus,.btn:active {
-    outline: none !important;
-    box-shadow: none;
- }
-
-.btn a {
-    text-decoration: none !important;
+@media (min-width: 768px) {
+    h2 {
+        font-size: 80px;
+    }
 }
 
-.nav {
-    text-align: right;
+/* ------------------------------------------
+Nav bar  */
+
+
+
+.navbar {
     height: 150px;
+    width: 100% ;
     padding: 25px;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
-.buttons {
-    margin-left: 500px;
+.navo {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
 }
 
 
 
-/* 
-Add wave page
+/* ------------------------------------------------- 
+Share page 
 */
 
 form {
@@ -66,7 +80,7 @@ form {
     font-weight: bold;
     color: black;
     padding: 10px;
-    margin: 30px 200px;
+    margin: 10px 200px;
 }
 
 label {
@@ -91,20 +105,19 @@ input {
 
 
 
-/* 
-Wave display page
+/*  --------------------------------------------------------
+North and South island pages
 */
 
 
 .pageTitle {
     color:black;
-    font-size: 120px;
-    padding: 30px 0px 30px 100px;
-    text-align: center;
+    font-size: 150px;
+    padding: 0px 20px;
 
 }
 
-.log {
+section {
     background-color: rgba(255, 255, 255, 0.42);
     width: 80%;
     margin: 20px;
@@ -112,13 +125,17 @@ Wave display page
 
 .info {
     text-align: left;
-    padding: 30px 10px 20px 0px;
+    padding: 30px 10px 20px 30px;
     font-size: 25px;
 }
 
+.extraInfo {
+    margin: 0px;
+    padding: 0px;
+}
 
 .img {
-    width: 500px;
+    width: 80%;
     height: 300px;
     padding: 20px 0px 20px 50px;
     
@@ -128,6 +145,21 @@ Wave display page
     color: black;
     font-size: 70px;
     width: 460px;
-    padding: 50px 20px 20px 70px;
+    /* padding: 50px 20px 20px 70px; */
+    text-align: center;
 }
+
+
+.btn {
+    margin: 0px 50px;
+    font-size: 25px;
+    color: grey;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+/* CSS transition
+SVG annimations  */
 
