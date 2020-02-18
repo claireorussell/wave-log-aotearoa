@@ -39,9 +39,8 @@ class Share extends React.Component {
     handleSubmit = (evt) => {
         evt.preventDefault()
         this.props.dispatch(saveBeach(this.state.beach))
-            .then(() => {
-                this.props.history.push('/') // different way to redirect after the form posts back to database
-            }) // doesn't like this!!! the .then is undefined?
+        this.props.history.push('/') // different way to redirect after the form posts back to database
+
     }
 
 
