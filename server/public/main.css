@@ -50,15 +50,19 @@ Nav bar  */
     width: 100% ;
     padding: 25px;
     background-color: white;
-}
-
-.navo {
     display: flex;
     justify-content: space-between;
 }
 
-.buttons {
-    margin-left: 500px;
+.navo {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
 }
 
 
