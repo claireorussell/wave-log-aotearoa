@@ -28,6 +28,9 @@ class Nav extends React.Component {
                             <Link to={'/south'}><a className="nav-link">South island</a></Link>
                         </li>
                         <li className="nav-item">
+                            <Link to={'/magic'}><a className="nav-link">Our Favourites</a></Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to={'/share'}><a className="nav-link">Log your wave</a></Link>
                         </li>
                     </ul>

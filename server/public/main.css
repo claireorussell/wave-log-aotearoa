@@ -57,8 +57,9 @@ Nav bar  */
     justify-content: space-between;
 }
 
-.buttons {
-    margin-left: 500px;
+
+.nav-item {
+    padding: 10px;
 }
 
 
@@ -115,7 +116,7 @@ North and South island pages
 
 section {
     background-color: rgba(255, 255, 255, 0.42);
-    width: 80%;
+    width: 70%;
     margin: 20px;
 }
 
@@ -156,6 +157,15 @@ section {
     outline: none !important;
     box-shadow: none;
  }
-/* CSS transition
-SVG annimations  */
 
+
+/* 
+----------------------------------- 
+Magic seaweed API 
+*/
+
+/* .extApi {
+    background-color: rgba(255, 255, 255, .75);
+    margin: 30px;
+    width: 50%;
+} */
