@@ -7,12 +7,21 @@ function getNorthBeaches(db = connection) {
     return db('waves')
     .where('location_id', '=', '1')
     .select('*')
+    .map(beach => {
+        beach.extra = JSON.parse(beach.extra)
+        return beach
+    })
 }
 
 function getSouthBeaches(db = connection){
     return db('waves')
     .where('location_id', '=', '2')
     .select('*')
+    .map(beach => {
+        beach.extra = JSON.parse(beach.extra)
+        console.log(beach)
+        return beach
+    })
 }
 
 function saveBeach(beach, db = connection) { // called from the routes folder

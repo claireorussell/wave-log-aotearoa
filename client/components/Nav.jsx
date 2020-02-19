@@ -9,7 +9,7 @@ class Nav extends React.Component {
 
 
             
-            <nav className="navbar navbar-expand-lg navbar-light ">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <div className='navo'>
                 <h2 className="navTitle">Wave log</h2>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

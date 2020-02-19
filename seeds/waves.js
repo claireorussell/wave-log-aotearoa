@@ -6,7 +6,7 @@ exports.seed = function (knex) {
       // Inserts seed entries
       return knex('Waves').insert([
         {
-          id: 1, name: 'Tora', swell: 8, image: 'https://farm9.static.flickr.com/8738/17553632305_7254264f39_b.jpg', difficulty: 5, region: 'Wellington', location_id: 1, extra: ['Need a 4WD to get to the beach.', 'Great for freedom campers.', 'Rocky break!'], break: 'Left & Right',
+          id: 1, name: 'Tora', swell: 8, image: 'https://farm9.static.flickr.com/8738/17553632305_7254264f39_b.jpg', difficulty: 5, region: 'Wellington', location_id: 1, extra: JSON.stringify(['Need a 4WD to get to the beach.', 'Great for freedom campers.', 'Rocky break!']), break: 'Left & Right',
         },
         {
           id: 2,
@@ -16,7 +16,7 @@ exports.seed = function (knex) {
           difficulty: 5,
           region: 'Waikato',
           location_id: 1,
-          extra: ['Super popular local beach.', 'Mostly suited for Advanced surfers.'],
+          extra: JSON.stringify(['Super popular local beach.', 'Mostly suited for Advanced surfers.']),
           break: 'Left',
 
         },
@@ -28,7 +28,7 @@ exports.seed = function (knex) {
           difficulty: 3,
           region: 'Canterbury',
           location_id: 2,
-          extra: ['You must have permission to cross land to access the bay.'],
+          extra: JSON.stringify(['You must have permission to cross land to access the bay.']),
           break: 'Left',
         },
         {
@@ -39,7 +39,7 @@ exports.seed = function (knex) {
           difficulty: 5,
           region: 'Kaikoura',
           location_id: 2, 
-          extra: ['Exposed reef so do your homework from the beach!', 'super limited carparking'],
+          extra: JSON.stringify(['Exposed reef so do your homework from the beach!', 'super limited carparking']),
           break: 'Right',
         },
             {
@@ -50,7 +50,7 @@ exports.seed = function (knex) {
               difficulty: 3,
               region: 'Dunedin',
               location_id: 2, 
-              extra: ['Popular family beach.','Lots of room for everyone!'],
+              extra: JSON.stringify(['Popular family beach.','Lots of room for everyone!']),
               break: "Left and Right",
           },
           {
@@ -61,7 +61,7 @@ exports.seed = function (knex) {
             difficulty: 3,
             region: 'Canterbury',
             location_id: 2,
-            extra: ['Open bay at the start of Godley Head', 'Big carpark'],
+            extra: JSON.stringify(['Open bay at the start of Godley Head', 'Big carpark']),
             break: 'Left and Right',
           },
         {
@@ -72,7 +72,7 @@ exports.seed = function (knex) {
           difficulty: 3,
           region: 'Taranaki',
           location_id: 1, 
-          extra: ['Reliable surf, best in Spring and Summer.'],
+          extra: JSON.stringify(['Reliable surf, best in Spring and Summer.']),
           break: 'Right',
         }
       ]);

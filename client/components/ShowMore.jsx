@@ -11,14 +11,14 @@ class ShowMore extends React.Component {
                 <div>
                     <p>Average swell: {this.props.beach.swell}</p>
                     <p>Break direction: {this.props.beach.break}</p>
-                    <h4>Helpful hints ...</h4> 
+                    <h3>Helpful hints</h3> 
                     </div>
-                    {/* {this.props.beach.extra.map(hint => {
+                    {this.props.beach.extra.map(hint => {
                         console.log(hint)
-                        // return (
-                        //     <p>{hint}</p>
-                        // )
-                    })} */}
+                        return (
+                            <p>{hint}</p>
+                        )
+                    })}
                 <img className='img' src={this.props.beach.image} />
             </div>
         )

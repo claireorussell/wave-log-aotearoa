@@ -50,16 +50,23 @@ Nav bar  */
     width: 100% ;
     padding: 25px;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navo {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 
 .nav-item {
     padding: 10px;
+} 
+.collapse {
+    display: flex;
+    justify-content: flex-end;
 }
 
 
