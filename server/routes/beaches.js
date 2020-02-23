@@ -14,7 +14,7 @@ router.get('/northbeaches', (req, res) => {
 router.get('/southbeaches', (req, res) => {
   db.getSouthBeaches()
     .then(beaches => res.json(beaches))
-    // for the database function that returns athe db table 
+    // for the database function that returns the db table 
 })
 
 router.post('/saveBeach', (req, res) => {
