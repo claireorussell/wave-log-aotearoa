@@ -19,16 +19,19 @@ class Nav extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="nav navbar-nav navbar-right">
                         <li className="nav-item">
-                            <Link to={'/'}><a className="nav-link">Home</a></Link>
+                            <Link to={'/'}><p className="nav-link">Home</p></Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/north'}><a className="nav-link">North island</a></Link>
+                            <Link to={'/north'}><p className="nav-link">North island</p></Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/south'}><a className="nav-link">South island</a></Link>
+                            <Link to={'/south'}><p className="nav-link">South island</p></Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/share'}><a className="nav-link">Log your wave</a></Link>
+                            <Link to={'/magic'}><p className="nav-link">Our Favourites</p></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={'/share'}><p className="nav-link">Log your wave</p></Link>
                         </li>
                     </ul>
                 </div>

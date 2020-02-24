@@ -105,7 +105,6 @@ class Share extends React.Component {
 
                     <label >Helpful hints: </label>
                     <input
-                        className='hintInput'
                         type='text'
                         name='extra'
                         value={this.state.beach.extra}

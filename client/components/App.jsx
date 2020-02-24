@@ -6,6 +6,7 @@ import Home from './Home'
 import North from './North'
 import South from './South'
 import Share from './Share'
+import MagicSeaweed from './MagicSeaweed'
 
 
 class App extends React.Component{
@@ -19,7 +20,7 @@ class App extends React.Component{
         <Route path='/north' component={North} />
         <Route path='/south' component={South} />
         <Route path='/share' component={Share} />
-        {/* <Footer Footer={Footer} /> */}
+        <Route path='/magic' component={MagicSeaweed} />
         </div>
     </Router>
 

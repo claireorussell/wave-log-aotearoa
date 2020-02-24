@@ -36,11 +36,12 @@ function saveBeach(beach, db = connection) { // called from the routes folder
         region: beach.region,
         location_id: beach.location_id,
     })
-    
 }
+
 
 module.exports = {  
     getNorthBeaches: getNorthBeaches,
     getSouthBeaches: getSouthBeaches,
-    saveBeach: saveBeach
+    saveBeach: saveBeach, 
+   
 }

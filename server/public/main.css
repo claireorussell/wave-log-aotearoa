@@ -60,6 +60,10 @@ Nav bar  */
     width: 100%;
 }
 
+
+.nav-item {
+    padding: 10px;
+} 
 .collapse {
     display: flex;
     justify-content: flex-end;
@@ -99,9 +103,7 @@ input {
     margin-bottom: 20px;
 }
 
-.hintInput {
-    height: 200px;
-}
+
 
 
 
@@ -119,7 +121,7 @@ North and South island pages
 
 section {
     background-color: rgba(255, 255, 255, 0.42);
-    width: 80%;
+    width: 800px;
     margin: 20px;
 }
 
@@ -135,10 +137,9 @@ section {
 }
 
 .img {
-    width: 800px;
+    width: 700px;
     height: 300px;
     padding: 20px 0px 20px 50px;
-    
 }
 
 .waveTitle {
@@ -160,6 +161,15 @@ section {
     outline: none !important;
     box-shadow: none;
  }
-/* CSS transition
-SVG annimations  */
 
+
+/* 
+----------------------------------- 
+Magic seaweed API 
+*/
+
+/* .extApi {
+    background-color: rgba(255, 255, 255, .75);
+    margin: 30px;
+    width: 50%;
+} */
