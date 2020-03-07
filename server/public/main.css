@@ -4,6 +4,7 @@ All pages and Home
 
 body {
     background-image: url(./images/IMG-20190705-WA0001.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     color: black;
@@ -46,7 +47,7 @@ Nav bar  */
 
 
 .navbar {
-    height: 150px;
+    height: 100px;
     width: 100% ;
     padding: 25px;
     background-color: white;

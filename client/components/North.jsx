@@ -19,7 +19,6 @@ class North extends React.Component {
 
     componentDidMount() {
         this.props.dispatch(getNorthBeaches())
-
     }
 
 
@@ -42,12 +41,14 @@ class North extends React.Component {
                         <section>
                             <div className='row log'>
                                 <h3 className='waveTitle'>{beach.name}</h3>
+
                                 <div className='info'>
                                     <p>{beach.region} region</p>
                                     <p>Difficulty level: {beach.difficulty}</p>
-                                
-                                {this.state.showMore && <ShowMore beach={beach} />}
+
+                                    {this.state.showMore && <ShowMore beach={beach} />}
                                 </div>
+
                             </div>
                             {this.state.showMore ? <button className='btn' onClick={this.handleClick}>Show less</button> : <button className='btn' onClick={this.handleClick}>Show more good stuff</button>}
                         </section>
