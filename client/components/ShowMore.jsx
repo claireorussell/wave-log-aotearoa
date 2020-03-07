@@ -7,21 +7,19 @@ class ShowMore extends React.Component {
 
     render() {
         return (
-            <div className='showMore'>
-                <div className='beachImg'>
-                    <img className='img' src={this.props.beach.image} />
-                </div>
-                <div className='infoTwo'>
+            <div>
                     <p>Average swell: {this.props.beach.swell}</p>
                     <p>Break direction: {this.props.beach.break}</p>
-                    <h3>Helpful hints</h3>
+                    <h4>Helpful hints ...</h4> 
+                  
                     {this.props.beach.extra.map(hint => {
                         console.log(hint)
                         return (
                             <li>{hint}</li>
                         )
                     })}
-                </div>
+                    <img className='img' src={this.props.beach.image} alt="picture of surf wave" />
+               
             </div>
         )
     }
