@@ -36,7 +36,7 @@ class Beach extends React.Component {
                         {this.state.showMore && <ShowMore beach={beach} />}
                     </div>
                 </div>
-                {this.state.showMore ? <button className='btn' onClick={this.handleClick}>Show less</button> : <button className='btn' onClick={this.handleClick}>Show more good stuff</button>}
+                {this.state.showMore ? <button className='btn' onClick={this.handleClick}>X</button> : <button className='btn' onClick={this.handleClick}>+</button>}
             </section>
         )
     }

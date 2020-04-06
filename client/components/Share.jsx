@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { saveBeach } from '../actions/index'
 
 import { connect } from 'react-redux'
@@ -111,7 +110,7 @@ class Share extends React.Component {
                         onChange={this.handleChange}
                     />
 
-                    <input className="btn formBtn" type="submit"></input>
+                    <input className="btn formBtn" type="submit" value='+'></input>
 
                 </form>
             </div>
