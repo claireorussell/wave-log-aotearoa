@@ -17,7 +17,7 @@ class North extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className='container'>
                 <h1 className='pageTitle'>North island</h1>
 
                 {this.props.beaches.map((beach) => {

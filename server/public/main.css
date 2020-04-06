@@ -65,6 +65,11 @@ Nav bar  */
 .nav-item {
     padding: 10px;
 } 
+
+a:hover {
+    text-decoration: none !important;
+}
+
 .collapse {
     display: flex;
     justify-content: flex-end;
@@ -90,18 +95,30 @@ form {
 
 label {
     height:10px;
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 
 input {
     height: 35px;
     width: 445px;
+    border: 0.5px solid rgba(0, 0, 255, 0.194);
+    outline: none !important;
+    border-radius:5px;
 }
 
 .dropDownLocationId {
     height: 2pc;
     width: 28pc;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    border: 0.5px solid rgba(0, 0, 255, 0.194);
+}
+
+.formBtn {
+    font-size: 20px;
+    height: auto;
+    margin:0px;
+    padding:0px;
+    
 }
 
 
@@ -153,9 +170,9 @@ section {
 
 
 .btn {
-    margin: 0px 50px;
-    font-size: 25px;
-    color: grey;
+    /* margin: 0px 50px; */
+    font-size: 50px;
+    color: rgb(0, 102, 255);
 }
 
 .btn:focus,.btn:active {
